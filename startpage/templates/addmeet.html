@@ -1,0 +1,411 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>The Employment Portal</title>
+    <script type="text/javascript">
+      function con_validate(){
+        alert("Message sent...\nThanks for your feedback")
+          
+        }
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+      * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Electricians {background-color: rgb(255, 255, 255);}
+#Barber {background-color: rgb(255, 255, 255);}
+#Contact {background-color: rgb(255, 255, 255);}
+#About {background-color: rgb(255, 255, 255);}
+#Technician {background-color: rgb(255, 255, 255);}
+#Contractor {background-color: rgb(255, 255, 255);}
+#Laundary {background-color: rgb(255, 255, 255);}
+    </style>
+    
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">SecuredMeets<span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/sellerreg" class="nav-link">Update Profile</a></li>
+                <!--    <li><a href="#team-section" class="nav-link">Categories</a></li> -->
+                
+             
+               {% if user.is_authenticated %}
+                <li><a href="logout" class="nav-link">Logout</a></li>
+                {% endif %}
+              
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+
+  
+     
+    <div class="site-blocks-cover overlay" style="background-image: url(static/images/welcome21.jpg);" data-aos="fade" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+            <br>
+          <div class="col-md-8 mt-lg-5 text-center">
+              {% if user.is_authenticated %}
+            <h1 class="text-uppercase" data-aos="fade-up">Welcome {{user.username}}</h1>
+               {% endif %}
+     <!--       <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Our services enables users to rent self drive for travelling the city or outstation.</p>
+              -->
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              
+              
+            <div data-aos="fade-up" data-aos-delay="100">
+                <form>
+                    <div class="form-group" >
+                      <input type="text" class="form-control" id="meetlink" placeholder="Enter link">
+                    </div>
+                    <a href="sellerreg" class="btn smoothscroll btn-primary mr-2 mb-2">Add a meeting</a>
+                </form>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+  <!--  
+    <section class="site-section border-bottom" id="team-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Categories</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Listed below are some of the categories of workers available,select as per your requirement.</p>
+          </div>
+        </div>
+      </div>
+       </section>
+        
+
+    <button class="tablink" onclick="openPage('Electricians', this, 'rgb(57, 135, 236)')">Electricians</button>
+    <button class="tablink" onclick="openPage('Barber', this, 'rgb(57, 135, 236)')" id="defaultOpen">Barbers</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'rgb(57, 135, 236)')">Plumbers</button>
+    <button class="tablink" onclick="openPage('About', this, 'rgb(57, 135, 236)')">Mechanic</button>
+    <button class="tablink" onclick="openPage('Technician', this, 'rgb(57, 135, 236)')">Technician</button>
+    <button class="tablink" onclick="openPage('Contractor', this, 'rgb(57, 135, 236)')">Contractor</button>
+    <button class="tablink" onclick="openPage('Laundary', this, 'rgb(57, 135, 236)')">Laundary Worker</button>
+    
+    
+    <div id="Electricians" class="tabcontent">
+      <section class="site-section border-bottom" id="team-section">
+        <div class="container">
+         <div class="row">
+  
+            
+             {% for msg in messages %}
+             {% if msg.status == 1 %}
+             {% if msg.hdstatus == 'Electrician' %}
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+              <div class="team-member">
+                <figure>
+                  <ul class="social">
+                    <li><a href="#"><span class="icon-facebook"></span></a></li>
+                    <li><a href="#"><span class="icon-twitter"></span></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=+91{{msg.whatsapp_no}} "><span class="icon-whatsapp"></span></a></li>
+                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                  </ul>
+                  
+                  <img src="/media/{{msg.shop_photo}}" alt="Image" class="img-fluid">
+                </figure>
+                <div class="p-3">
+                  <h3>{{msg.shop_name}}</h3>
+                  <span class="position">Address : {{msg.address}}</span><br>
+                  <span class="position"> {{msg.hdstatus}}</span><br>
+                  <p>
+                    <span class="icon-phone d-block h4 text-primary"></span>
+                  <a href="tel:+91{{msg.whatsapp_no}}">+91{{msg.whatsapp_no}}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+      </section>
+    </div>
+    
+    <div id="Barber" class="tabcontent">
+      <section class="site-section border-bottom" id="team-section">
+        <div class="container">
+         <div class="row">
+  
+            
+             {% for msg in messages %}
+             {% if msg.status == 1 %}
+             {% if msg.hdstatus == 'Barber' %}
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+              <div class="team-member">
+                <figure>
+                  <ul class="social">
+                    <li><a href="#"><span class="icon-facebook"></span></a></li>
+                    <li><a href="#"><span class="icon-twitter"></span></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=+91{{msg.whatsapp_no}} "><span class="icon-whatsapp"></span></a></li>
+                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                  </ul>
+                  
+                  <img src="/media/{{msg.shop_photo}}" alt="Image" class="img-fluid">
+                </figure>
+                <div class="p-3">
+                  <h3>{{msg.shop_name}}</h3>
+                  <span class="position">Address : {{msg.address}}</span><br>
+                  <span class="position"> {{msg.hdstatus}}</span><br>
+                  <p>
+                    <span class="icon-phone d-block h4 text-primary"></span>
+                  <a href="tel:+91{{msg.whatsapp_no}}">+91{{msg.whatsapp_no}}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+      </section>
+     -->
+
+  <!-- 
+    <section class="site-section border-bottom" id="team-section">
+      <div class="container">
+       <div class="row">
+
+          
+           {% for msg in messages %}
+           {% if msg.status == 1 %}
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                <ul class="social">
+                  <li><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=+91{{msg.whatsapp_no}} "><span class="icon-whatsapp"></span></a></li>
+                  <li><a href="#"><span class="icon-instagram"></span></a></li>
+                </ul>
+                
+                <img src="/media/{{msg.shop_photo}}" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>{{msg.shop_name}}</h3>
+                <span class="position">Address : {{msg.address}}</span><br>
+                <span class="position"> {{msg.hdstatus}}</span><br>
+                <span class="position">Contact no : {{msg.whatsapp_no}}</span>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+      </div>
+      </div>
+    </section>
+      -->      
+   
+
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>EmploymentPortal is platform that connects these job-seeking profesionals with their clients that 
+                  that are having a specified job for such professionals.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="#services-section" class="smoothscroll">Services</a></li>
+                  <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | EmploymentPortal
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+
+ 
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+  
+  <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript">
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+    
+  </body>
+</html>

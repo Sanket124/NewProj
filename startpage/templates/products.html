@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+</style>
+<body>
+
+
+  <!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+ <!--   <a href="/" class="w3-bar-item w3-button">HOME</a> -->
+    <a href="products" class="w3-bar-item w3-button">PRODUCTS</a>
+    <a href="process" class="w3-bar-item w3-button">OUR PROCESS</a>
+    <a href="gallery" class="w3-bar-item w3-button">SCRAP YARD GALLERY</a>
+    <a href="logout" class="w3-bar-item w3-button">Logout</a>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">PRODUCTS</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">STEEL (FEROUS)</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">COPPER (NON-FEROUS)</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">ALUMINIUM</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Foundry plate</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+      <hr>
+   
+      <h1><b>Plate and structural</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+      <hr>
+      
+      <h1><b>#1 heavy metal</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+      <hr>
+
+      <h1><b>#2 scrap steel</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <hr>
+
+      <h1><b>Baling tin</b> <span class="w3-tag w3-red w3-round">New!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <hr>
+
+      <h1><b>Cast iron</b> <span class="w3-tag w3-grey w3-round">Trendy</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>No.1 bright copper wire</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <hr>
+   
+      <h1><b>No.1 copper</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <hr>
+      
+      <h1><b>#1 insulated copper wire</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <hr>
+
+      <h1><b>Copper/aluminum fins</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.50</span></h1>
+      <hr>
+
+       <h1><b>No.1 tech cable</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <hr>
+      
+      
+      <h1><b>#2 insulated copper wire</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Old sheet</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <hr>
+   
+      <h1><b>Aluminum wheels</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <hr>
+      
+      <h1><b>Cast aluminum</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <hr>
+
+       <h1><b>Litho sheets</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$19.50</span></h1>
+      <hr>
+
+       <h1><b>Transmissions</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <hr>
+      
+      <h1><b>Irony aluminum</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+    </div><br>
+
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="" target="_blank" class="w3-hover-text-green">Satyam Thakur</a></p>
+</footer>
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+          <!-- Navbar (sit on top) -->
+    <div class="w3-top w3-hide-small">
+      <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button">HOME</a>
+      <!--  <a href="products" class="w3-bar-item w3-button">PRODUCTS</a> -->
+        <a href="process" class="w3-bar-item w3-button">OUR PROCESS</a>
+        <a href="gallery" class="w3-bar-item w3-button">SCRAP YARD GALLERY</a>
+        <a href="contact" class="w3-bar-item w3-button">CONTACT US</a>
+      </div>
+    </div>
+
+<section>
+	    <div class="container">
+	    	<!-- First Grid -->
+			<div class="w3-row-padding w3-padding-64 w3-container">
+			  <div class="w3-content">
+			    <div class="w3-twothird">
+			      <h1>Contact Scrapdeal</h1>
+			      <h5 class="w3-padding-32">Scrapdeal in a family-run scrap metal recycling business , serving the entire Indore. We offer cash for scrap, metal recycling, demolition services, and scrap metal pickup. We process a number of different types of metals, including copper, insulated copper wire, steel, and more. We proudly maintain an eco-friendly recycling process that protects the environment as much as possible. When you need a recycling facility that is good for the planet, for our clients, and our employees, without sacrificing efficiency, come to Scrapdeal!</h5>
+
+			      <p class="w3-text-grey">Contact us today by phone or email or use the e-form on this page..</p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+				<h2>Contact Us</h2>
+				<h4>We would love to hear from you !</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+
+			<div class="contact-form">
+				<form method="POST" action="/contact_form">
+                 {% csrf_token %}
+                
+
+				<div class="form-group">
+				  <label class="control-label col-sm-4" for="fname">First Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-4" for="lname">Last Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" required>
+				  </div>
+				</div>
+				
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="email">Email:</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+				  </div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-4" for="lname">Subject:</label>
+					<div class="col-sm-10">          
+					  <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="subject" required>
+					</div>
+				  </div>
+
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="comment">Message:</label>
+				  <div class="col-sm-10">
+					<textarea class="form-control" rows="5" id="comment" name='message'></textarea>
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				  </div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+      <h5>Find Us On</h5>
+      <div class="w3-xlarge w3-padding-16">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div>
+      <p>Powered by <a href="" target="_blank" class="w3-hover-text-green">Satyam Thakur</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
+    </script>
+</body>
+</html>
